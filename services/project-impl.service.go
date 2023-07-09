@@ -27,14 +27,13 @@ func (p *ProjectImpl) CreateProject(project *models.Project) error {
 	return err
 }
 
-func (p *ProjectImpl) GetProject(id *primitive.ObjectID) (*models.Project, error) {
+func (p *ProjectImpl) GetProject(id *primitive.ObjectID) (*models.ResponseProject, error) {
 
 	return nil, nil
 }
 
-func (p *ProjectImpl) GetAllProjects() ([]*models.Project, error) {
-	var projects []*models.Project
-	var project models.Project
+func (p *ProjectImpl) GetAllProjects() ([]*models.ResponseProject, error) {
+	var projects []*models.ResponseProject
 
 	cursor, err := p.projectCollection.Find(p.ctx, bson.D{})
 
@@ -43,6 +42,7 @@ func (p *ProjectImpl) GetAllProjects() ([]*models.Project, error) {
 	}
 
 	for cursor.Next(p.ctx) {
+		var project models.ResponseProject
 		err := cursor.Decode(&project)
 		if err != nil {
 			return nil, err

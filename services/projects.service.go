@@ -8,8 +8,8 @@ import (
 
 type ProjectService interface {
 	CreateProject(*models.Project) error
-	GetProject(*primitive.ObjectID) (*models.Project, error)
-	GetAllProjects() ([]*models.Project, error)
+	GetProject(*primitive.ObjectID) (*models.ResponseProject, error)
+	GetAllProjects() ([]*models.ResponseProject, error)
 	UpdateProject(*models.Project) error
 	DeleteProject(*primitive.ObjectID) error
 }
