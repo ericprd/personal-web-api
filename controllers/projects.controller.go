@@ -69,7 +69,7 @@ func (p *ProjectController) DeleteProject(c *gin.Context) {
 func (p *ProjectController) CreateProjectRoutes(rg *gin.RouterGroup) {
 	route := rg.Group("/projects")
 	route.GET("/", p.GetAllProjects)
-	route.POST("/", p.CreateProject)
+	route.POST("/create-project", p.CreateProject)
 	route.GET("/:title", p.GetProject)
 	route.PUT("/:title", p.UpdateProject)
 	route.DELETE("/:title", p.DeleteProject)
