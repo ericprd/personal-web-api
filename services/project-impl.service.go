@@ -3,7 +3,8 @@ package services
 import (
 	"context"
 	"errors"
-	"personal-web-api/models"
+
+	"github.com/ericprd/personal-web-api/models"
 
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"

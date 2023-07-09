@@ -4,8 +4,9 @@ import (
 	"fmt"
 	"log"
 	"os"
-	"personal-web-api/controllers"
-	"personal-web-api/services"
+
+	"github.com/ericprd/personal-web-api/controllers"
+	"github.com/ericprd/personal-web-api/services"
 
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
@@ -52,5 +53,5 @@ func main() {
 	basePath := server.Group("/v1")
 	ProjectController.CreateProjectRoutes(basePath)
 
-	log.Fatal(server.Run())
+	server.Run()
 }

@@ -2,9 +2,10 @@ package controllers
 
 import (
 	"net/http"
-	"personal-web-api/helpers"
-	"personal-web-api/models"
-	"personal-web-api/services"
+
+	"github.com/ericprd/personal-web-api/helpers"
+	"github.com/ericprd/personal-web-api/models"
+	"github.com/ericprd/personal-web-api/services"
 
 	"github.com/gin-gonic/gin"
 )
